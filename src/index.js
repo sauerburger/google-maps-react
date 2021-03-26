@@ -113,6 +113,9 @@ export class Map extends React.Component {
     if (this.props.bounds && this.props.bounds !== prevProps.bounds) {
       this.map.fitBounds(this.props.bounds);
     }
+    if (this.props.mapType !== prevProps.mapType) {
+      this.map.setMapTypeId(this.props.mapType);
+    }
   }
 
   componentWillUnmount() {
